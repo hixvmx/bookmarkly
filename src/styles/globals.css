@@ -1,0 +1,188 @@
+:root {
+    --site-color-primary: #2e4c9c;
+
+    --bg-color-primary: #ffffff;
+    --bg-color-secondary: #f3f4f6;
+
+    --text-color-primary: #42454b;
+    --text-color-secondary: #6b7280;
+
+    --border-color-primary: #e5e7eb;
+    --border-color-secondary: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--text-color-secondary);
+    background-color: var(--bg-color-primary);
+    font-family: calibri;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.header,
+.section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.socialLinks {
+    display: flex;
+}
+
+.socialLinks li {
+    margin-left: 1rem;
+}
+
+.socialLinks li a svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--text-color-secondary);
+}
+
+.socialLinks li a:hover svg {
+    fill: var(--site-color-primary);
+}
+
+/* Select File */
+.selectFile {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.UploadBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.UploadBtn svg {
+    width: 60px;
+    height: 60px;
+    fill: var(--text-color-secondary);
+}
+
+.UploadBtn:hover svg {
+    fill: var(--text-color-primary);
+}
+
+/* Show Links */
+.showLinks {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    min-height: 80vh;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgPlaceholder {
+    width: 18px;
+    height: 18px;
+    background-color: var(--bg-color-secondary);
+    border-radius: 2px;
+}
+
+.link p {
+    margin-top: 8px;
+}
+
+.link:hover p {
+    text-decoration: underline;
+}
+
+/* Button To Change File */
+.ChangeFileBtn {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 1rem;
+    background: var(--bg-color-secondary);
+    border: 1px solid var(--border-color-primary);
+    color: var(--text-color-secondary);
+    box-shadow: 0px 5px 28px 0px rgb(0 0 0 / 10%);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.ChangeFileBtn:hover {
+    color: var(--text-color-primary);
+}
+
+/* Media Sizes */
+@media (max-width: 900px) {
+    .links {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .links {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+
+
+/* 
+ * created by hixvm
+ * https://twitter.com/hixvmx
+ * https://github.com/hixvmx
+ */
